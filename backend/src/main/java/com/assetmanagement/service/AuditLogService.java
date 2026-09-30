@@ -1,10 +1,8 @@
 package com.assetmanagement.service;
 
 import com.assetmanagement.entity.AuditLog;
-import com.assetmanagement.entity.User;
 
 import com.assetmanagement.repository.AuditLogRepository;
-import com.assetmanagement.repository.UserRepository;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,15 +15,9 @@ import java.util.List;
 public class AuditLogService {
 
     private final AuditLogRepository auditLogRepository;
-    private final UserRepository userRepository;
 
-
-    public AuditLogService(
-            AuditLogRepository auditLogRepository,
-            UserRepository userRepository) {
-
+    public AuditLogService(AuditLogRepository auditLogRepository) {
         this.auditLogRepository = auditLogRepository;
-        this.userRepository = userRepository;
     }
 
 
